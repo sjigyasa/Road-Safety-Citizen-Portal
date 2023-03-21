@@ -1,0 +1,157 @@
+<!DOCTYPE html lang=en>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Signin Page</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: url(images/3.jpg);
+            background-position: center;
+            background-size: cover;
+            text-align: center;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 25%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #f1f1f1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Set a style for the submit button */
+        .signinbtn {
+            background-color: #1a409f;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 25%;
+            opacity: 1;
+            
+        }
+
+        .signinbtn:hover {
+            opacity: 1;
+        }
+        a {
+            color: rgb(23, 4, 80);
+        }
+
+        .signin {
+
+            text-align: center;
+        }
+
+        .navbar {
+            position: fixed;
+            width: 100%;
+            z-index: 999;
+            padding: 0 0;
+            font-family: 'Ubuntu', sans-serif;
+            transition: all 0.3s ease;
+            
+        }
+
+        .navbar .sticky {
+            padding: 10px 0;
+            background: crimson;
+        }
+
+        .navbar .max-width {
+            max-width: 1300px;
+            padding: 0 10px;
+            margin: auto;
+        }
+
+        .navbar .max-width {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            color: #fff;
+            font-size: 35px;
+            font-weight: 600;
+        }
+
+        .navbar .logo a span {
+            color: crimson;
+            transition: all 0.3s ease;
+        }
+
+        .navbar .menu li {
+            list-style: none;
+            display: inline-block;
+        }
+
+        .navbar .menu li a {
+            display: block;
+            color: #fff;
+            font-size: 18px;
+            font-weight: 300;
+            margin-left: 50px;
+            transition: color 0.4s ease;
+        }
+
+        .navbar .menu li a:hover {
+            color: crimson;
+        }
+
+        .navbar .sticky .logo a span {
+            color: #fff;
+        }
+
+        .navbar .sticky .menu li a:hover {
+            color: crimson;
+        }
+    </style>
+
+</head>
+
+<body>
+    <section class="home" id="home">
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo"><a href="#"> Road<span> Safety.</span></a></div>
+                
+            </div>
+        </nav>
+        <br>
+        <br>
+        <br>
+        <form action="action_page.php">
+            <div class="container">
+                <br><br><br><br><br><br><br>
+                <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                <br>
+                <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+                <br>
+                
+                <button type="submit" class="signinbtn" id="signin"><strong>Sign in</strong></button>
+            </div>
+
+        </form>
+    </section>
+</body>
+<script>
+    document.getElementById("signin").addEventListener("click", redirectFunction);
+
+    function redirectFunction() {
+        window.location.href = "index.html";
+    }
+</script>
+</html>
